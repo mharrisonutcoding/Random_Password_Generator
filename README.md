@@ -2,7 +2,7 @@
  The application has a red button that, once clicked, will prompt the user for password criteria preferences. It will generate and display a random password with given parameters.
 
 ## Challenge Task
-    - Modify starter code given to create a random password generator that employees would be able to use based on criteria they select in the prompts given. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+    - Modify starter code given (HTML, CSS, and partial JS) to create a random password generator that employees would be able to use based on criteria they select in the prompts given. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
 
 ## User Story
 
