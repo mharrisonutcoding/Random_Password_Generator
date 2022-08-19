@@ -81,6 +81,12 @@ function generatePassword() {
         optionsCart.push(uppercaseList)
     }
 
+    // if no options are selected above, it will default to the uppercase list
+
+    if (optionsCart.length === 0) {
+        optionsCart.push(uppercaseList)
+    }
+
     // console.log(optionsCart)
 
     var passwordGen = ""
@@ -88,8 +94,11 @@ function generatePassword() {
     for (var i = 0; i < passwordLength; i++) {
         var randomList = getRandomItem(optionsCart)
         var randomChar = getRandomItem(randomList)
-        console.log(randomChar)
+        passwordGen += randomChar
     }
+
+    // console.log(passwordGen)
+    return passwordGen
 
 
 
