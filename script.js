@@ -3,13 +3,15 @@ var generateBtn = document.querySelector("#generate");
 
 // function for generate password and prompt the user for criteria
 function generatePassword() {
+
     var userInput = window.prompt("What should the length of your password be? Choose between 8 and 128 characters!");
+    
     // console.log(userInput)
 
     var passwordLength = parseInt(userInput)
 
     // Validation check for correct character type
-    
+
     if (isNaN(passwordLength)) {
         window.alert("Not a number! Use numerical characters!")
         return 
@@ -24,6 +26,24 @@ function generatePassword() {
     }
 
 }
+
+    // Different command prompts for acceptance criteria
+
+    var numPref = window.confirm("Would you like Numbers included in your password?")
+    var symPref = window.confirm("Would you like Symbols added?")
+    var lowerPref = window.confirm("Would you like to include Lowercase letters?")
+    var upperPref = window.confirm("Would you like to include Uppercase letters?")
+    
+    // Corresponding arrays for valid character inputs by the user
+
+    var numberList = ["0","1","2","3","4","5","6","7","8","9"]
+    var symbolList = ["!","@","#","$","%","_","&"]
+    var lowercaseList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    var uppercaseList = []
+
+    for (var i = 0; i < lowercaseList.length; i++) {
+        uppercaseList[i] = lowercaseList[i].toUpperCase()
+    }
 
 
 // Write password to the #password input
