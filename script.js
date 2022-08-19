@@ -1,6 +1,22 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// added function to generate random number
+function randomInt(min, max) {
+    if (!max) {
+        max = min
+        min = 0
+    }
+    
+    var rand = Math.random()
+    return Math.floor(min*(1-rand) + rand*max)
+}
+
+// gives random position in a list
+function getRandomItem(list) {
+    return list[randomInt(list.length)]
+}
+
 // function for generate password and prompt the user for criteria
 function generatePassword() {
 
@@ -65,7 +81,18 @@ function generatePassword() {
         optionsCart.push(uppercaseList)
     }
 
-    console.log(optionsCart)
+    // console.log(optionsCart)
+
+    var passwordGen = ""
+
+    for (var i = 0; i < passwordLength; i++) {
+        var randomList = getRandomItem(optionsCart)
+        var randomChar = getRandomItem(randomList)
+        console.log(randomChar)
+    }
+
+
+
 }
 
 // Write password to the #password input
