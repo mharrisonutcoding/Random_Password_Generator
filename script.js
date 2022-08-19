@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 
     var userInput = window.prompt("What should the length of your password be? Choose between 8 and 128 characters!");
-    
+
     // console.log(userInput)
 
     var passwordLength = parseInt(userInput)
@@ -25,7 +25,7 @@ function generatePassword() {
         return
     }
 
-}
+
 
     // Different command prompts for acceptance criteria
 
@@ -41,10 +41,32 @@ function generatePassword() {
     var lowercaseList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     var uppercaseList = []
 
+    var optionsCart = [numberList]
+
+    // If statements to log array list that the user chooses in the character input prompts, and pushes them into the optionsCart array
+
     for (var i = 0; i < lowercaseList.length; i++) {
         uppercaseList[i] = lowercaseList[i].toUpperCase()
     }
+    
+    if (numPref === true) {
+        optionsCart.push(numberList)
+    }
 
+    if (symPref === true) {
+        optionsCart.push(symbolList)
+    }
+    
+    if (lowerPref === true) {
+        optionsCart.push(lowercaseList)
+    }
+    
+    if (upperPref === true) {
+        optionsCart.push(uppercaseList)
+    }
+
+    console.log(optionsCart)
+}
 
 // Write password to the #password input
 function writePassword() {
